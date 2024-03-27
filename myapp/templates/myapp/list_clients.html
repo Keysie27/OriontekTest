@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Clientes</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/list_clients.css' %}">
+</head>
+<body>
+    <h1>Lista de Clientes</h1>
+    <ul class="client-list">
+        {% for client in clients %}
+        <li>
+            <strong>{{ client.name }}</strong> ({{ client.email }})
+            <ul class="client-addresses">
+                {% for address in client.addresses.all %}
+                <li>{{ address.street }}, {{ address.city }}, {{ address.postal_code }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}"><button>Volver Atrás</button></a>
+    <footer>
+        <p>&copy; 2023 Mi Empresa</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Dirección</title>
+</head>
+<body>
+    <h1>Agregar Dirección</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Agregar</button>
+    </form>
+    <a href="{% url 'index' %}"><button>Volver Atrás</button></a>
+    <footer>
+        <p>&copy; 2023 Mi Empresa</p>
+    </footer>
+</body>
+</html>

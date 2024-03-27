@@ -1,0 +1,16 @@
+.client-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.client-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f1fbe4;
+    border-radius: 5px;
+}
+
+.client-addresses {
+    list-style-type: none;
+    padding-left: 20px;
+}

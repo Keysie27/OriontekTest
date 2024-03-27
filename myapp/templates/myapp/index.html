@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/index.css' %}">
+</head>
+<body>
+    <h1>Página de Inicio</h1>
+    <a class="button-link" href="{% url 'list_clients' %}"><button>Lista de Clientes</button></a>
+    <a class="button-link" href="{% url 'add_client' %}"><button>Agregar Cliente</button></a>
+    <a class="button-link" href="{% url 'add_address' %}"><button>Agregar Dirección</button></a>
+    <footer>
+        <p>&copy; 2023 Mi Empresa</p>
+    </footer>
+</body>
+</html>
